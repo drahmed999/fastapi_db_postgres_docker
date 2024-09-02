@@ -1,0 +1,11 @@
+name: "fastapi_with_postgres_image"
+
+services:
+  fastapi_todo:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    networks:
+      -my-net
+    ports:
+      - "8000:8000"
